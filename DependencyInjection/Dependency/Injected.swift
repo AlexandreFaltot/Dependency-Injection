@@ -9,7 +9,7 @@
 struct Injected<T> {
     var wrappedValue: T
 
-    init(_ scope: Resolver.Scope = .shared) {
+    init(_ scope: Scope = \.shared) {
         self.wrappedValue = Resolver.resolve(scope: scope)
     }
 }
